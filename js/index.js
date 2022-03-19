@@ -61,7 +61,7 @@ const teste = document.getElementById("commentsCurriculo");
 
 async function showCommentsCurriculo() {
   commentsSectionsCurriculo.innerHTML = "";
-  const response = await fetch("http://localhost:3333/comentariosCurriculo")
+  const response = await fetch("https://curriculoback.herokuapp.com/comentariosCurriculo")
   const commentsCurriculo = await response.json();
   console.log(commentsCurriculo);
 
@@ -94,7 +94,7 @@ async function addCommentsCurriculo() {
     comentario: comentario2.value,
   };
 
-  await fetch("http://localhost:3333/comentariosCurriculo", {
+  await fetch("https://curriculoback.herokuapp.com/comentariosCurriculo", {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const commentsSectionSobre = document.getElementById("commentsSobre");
 async function showCommentsSobre() {
 
   commentsSectionSobre.innerHTML = "";
-  const response = await fetch("http://localhost:3333/comentariosSobre");
+  const response = await fetch("https://curriculoback.herokuapp.com/comentariosSobre");
   const comments = await response.json();
   console.log(comments);
 
@@ -144,7 +144,7 @@ async function addCommentsSobre() {
     comentario: comentario1.value,
   };
 
-  await fetch('http://localhost:3333/comentariosSobre', {
+  await fetch('https://curriculoback.herokuapp.com/comentariosSobre', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
@@ -160,7 +160,7 @@ const commentsContatos = document.getElementById("commentsContato");
 
 async function showCommentsContato() {
   commentsContatos.innerHTML = "";
-  const response = await fetch("http://localhost:3333/comentariosContato");
+  const response = await fetch("https://curriculoback.herokuapp.com/comentariosContato");
   const comments = await response.json();
   console.log(comments);
 
@@ -198,7 +198,7 @@ async function addCommentsContato() {
     email: email.value,
   };
 
-  await fetch('http://localhost:3333/comentariosContato', {
+  await fetch('https://curriculoback.herokuapp.com/comentariosContato', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
